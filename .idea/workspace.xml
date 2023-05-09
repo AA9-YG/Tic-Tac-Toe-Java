@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36519041-0197-4b0d-be5b-65c85fe67f0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/layout/Board.java" afterDir="false" />
+    <list default="true" id="36519041-0197-4b0d-be5b-65c85fe67f0c" name="Changes" comment="Added XML file.">
+      <change afterPath="$PROJECT_DIR$/src/com/game/TicTacToe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +46,27 @@
       <option name="presentableId" value="Default" />
       <updated>1683596228944</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added functionality to the Board class.">
+      <created>1683602448861</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683602448861</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added XML file.">
+      <created>1683602487414</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683602487414</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added functionality to the Board class." />
+    <MESSAGE value="Added XML file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added XML file." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
