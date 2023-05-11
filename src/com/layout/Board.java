@@ -47,6 +47,18 @@ public class Board {
 
     /**
      * Normal Method:
+     * This method asks for the row and column indexes and then returns the value.
+     *
+     * @param row
+     * @param column
+     * @return
+     */
+    public char getValue(int row, int column) {
+        return layout[row][column];
+    }
+
+    /**
+     * Normal Method:
      * This method asks for the row and column indexes and then sets the value as 'X'.
      *
      * @param row
@@ -66,4 +78,5 @@ public class Board {
     public void setO(int row, int column) {
         layout[row][column] = 'O';
     }
+
 }
