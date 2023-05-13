@@ -28,11 +28,23 @@ public class TicTacToe {
         Scanner scan = new Scanner(System.in);
 
         while (!board.isFull()) {
+
+            boolean check = true;
+
             if (counter % 2 == 0) {
-                System.out.print("Ready Player 1? Enter row and column index: ");
-                int row = scan.nextInt();
-                int column = scan.nextInt();
-                board.setX(row, column);
+
+                while(check) {
+                    System.out.print("Ready Player 1? Enter row and column index: ");
+                    int row = scan.nextInt();
+                    int column = scan.nextInt();
+
+                    if ((row >= 0 && row < board.getRowSize()) && (column >= 0 && column < board.getRowSize())) {
+                        board.setX(row, column);
+                        break;
+                    }
+
+                    System.out.println("Try again Player 1. Make sure row and column fall within the board.");
+                }
 
                 if (board.checkX()) {
                     System.out.println("Congrats Player 1! You win!");
@@ -43,10 +55,19 @@ public class TicTacToe {
                 board.displayBoard();
 
             } else {
-                System.out.print("Ready Player 2? Enter row and column index: ");
-                int row = scan.nextInt();
-                int column = scan.nextInt();
-                board.setO(row, column);
+
+                while (check) {
+                    System.out.print("Ready Player 2? Enter row and column index: ");
+                    int row = scan.nextInt();
+                    int column = scan.nextInt();
+
+                    if ((row >= 0 && row < board.getRowSize()) && (column >= 0 && column < board.getRowSize())) {
+                        board.setO(row, column);
+                        break;
+                    }
+
+                    System.out.println("Try again Player 2. Make sure row and column fall within the board.");
+                }
 
                 if (board.checkO()) {
                     System.out.println("Congrats Player 2! You win!");

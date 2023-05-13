@@ -16,7 +16,7 @@ public class Board {
      * This will instantiate a Board object with 3x3 dimensions.
      */
     public Board() {
-        layout = new char[3][3];
+        layout = new char[][]{{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
     }
 
     public void displayBoard() {
@@ -102,7 +102,9 @@ public class Board {
 
         for (int i = 0; i < layout.length; i++) {
             for (int j = 0; j < layout[i].length; j++) {
-                if (((int) layout[i][j]) != 0)
+//                if (((int) layout[i][j]) != 0) // This checks if the char value doesn't equal null by converting to int and using 0 as null
+//                    counter++;
+                if (layout[i][j] != ' ')
                     counter++;
             }
         }
