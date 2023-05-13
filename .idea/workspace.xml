@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa6e71f-922c-40a9-b0d3-b5351bdcb6a7" name="Changes" comment="Updated">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/layout/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/layout/Board.java" afterDir="false" />
     </list>
@@ -87,7 +88,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683947602525</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added methods to assist in building game logic.">
+      <created>1683950085623</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683950085623</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated">
+      <created>1683950108580</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683950108580</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,6 +120,7 @@
     <MESSAGE value="Deleted .idea folder than rebuilt project" />
     <MESSAGE value="Added methods to help determine whether the board is full." />
     <MESSAGE value="Added more game logic" />
+    <MESSAGE value="Added methods to assist in building game logic." />
     <MESSAGE value="Updated" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
