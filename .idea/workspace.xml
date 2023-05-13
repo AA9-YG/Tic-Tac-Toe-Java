@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9aa6e71f-922c-40a9-b0d3-b5351bdcb6a7" name="Changes" comment="Added methods to help determine whether the board is full.">
+    <list default="true" id="9aa6e71f-922c-40a9-b0d3-b5351bdcb6a7" name="Changes" comment="Updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/game/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/game/TicTacToe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/layout/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/layout/Board.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +73,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683857651115</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added more game logic">
+      <created>1683947566229</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683947566229</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated">
+      <created>1683947602525</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683947602525</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -91,6 +104,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Deleted .idea folder than rebuilt project" />
     <MESSAGE value="Added methods to help determine whether the board is full." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added methods to help determine whether the board is full." />
+    <MESSAGE value="Added more game logic" />
+    <MESSAGE value="Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
 </project>
