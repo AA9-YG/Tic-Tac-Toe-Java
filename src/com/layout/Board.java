@@ -142,4 +142,56 @@ public class Board {
     public int size() {
         return calculateSize(layout);
     }
+
+    /**
+     * Normal Method:
+     * This method takes in a row index and then checks if the row in the array has all 'X' values.
+     * If so, then it returns true.
+     * @param row
+     * @return
+     */
+    public boolean checkXInRow(int row) {
+        if (layout[row][0] == 'X' && layout[row][1] == 'X' && layout[row][2] == 'X')
+            return true;
+        else return false;
+    }
+
+    /**
+     * Normal Method:
+     * This method takes in a column index and then checks if the column in the array has all 'O' values.
+     * If so, then it returns true.
+     * @param column
+     * @return
+     */
+    public boolean checkXInColumn(int column) {
+        if (layout[0][column] == 'X' && layout[1][column] == 'X' && layout[2][column] == 'X')
+            return true;
+        else return false;
+    }
+
+    /**
+     * Normal Method:
+     * This method takes in a column index and then checks if the column in the array has all 'O' values.
+     * If so, then it returns true.
+     * @param column
+     * @return
+     */
+    public boolean checkOInColumn(int column) {
+        if (layout[0][column] == 'O' && layout[1][column] == 'O' && layout[2][column] == 'O')
+            return true;
+        else return false;
+    }
+
+    /**
+     * Normal Method:
+     * This method takes in a row index and then checks if the row in the array has all 'O' values.
+     * If so, then it returns true.
+     * @param row
+     * @return
+     */
+    public boolean checkOInRow(int row) {
+        if (layout[row][0] == 'O' && layout[row][1] == 'O' && layout[row][2] == 'O')
+            return true;
+        else return false;
+    }
 }
