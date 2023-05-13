@@ -13,7 +13,7 @@ public class TicTacToe {
 
         board.displayBoard();
 
-        System.out.println(board.isFull());
+//        System.out.println(board.isFull()); // Checking output for isFull()
 
         // Testing if isFull() works properly
 //        for (int i = 0; i < 3; i++) {
@@ -34,6 +34,12 @@ public class TicTacToe {
                 int column = scan.nextInt();
                 board.setX(row, column);
 
+                if (board.checkX()) {
+                    System.out.println("Congrats Player 1! You win!");
+                    board.displayBoard();
+                    break;
+                }
+
                 board.displayBoard();
 
             } else {
@@ -41,6 +47,12 @@ public class TicTacToe {
                 int row = scan.nextInt();
                 int column = scan.nextInt();
                 board.setO(row, column);
+
+                if (board.checkO()) {
+                    System.out.println("Congrats Player 2! You win!");
+                    board.displayBoard();
+                    break;
+                }
 
                 board.displayBoard();
 
