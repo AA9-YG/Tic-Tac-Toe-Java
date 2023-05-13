@@ -150,7 +150,7 @@ public class Board {
      * @param row
      * @return
      */
-    public boolean checkXInRow(int row) {
+    private boolean checkXInRow(int row) {
         if (layout[row][0] == 'X' && layout[row][1] == 'X' && layout[row][2] == 'X')
             return true;
         else return false;
@@ -163,8 +163,51 @@ public class Board {
      * @param column
      * @return
      */
-    public boolean checkXInColumn(int column) {
+    private boolean checkXInColumn(int column) {
         if (layout[0][column] == 'X' && layout[1][column] == 'X' && layout[2][column] == 'X')
+            return true;
+        else return false;
+    }
+
+    /**
+     * Normal Method:
+     * This method checks the board diagonally for 'X' and if it is in all 3 spots, then the method returns true.
+     * @return
+     */
+    private boolean checkXDiagonally() {
+        if (layout[0][0] == 'X' && layout[1][1] == 'X' && layout[2][2] == 'X')
+            return true;
+        else if (layout[0][2] == 'X' && layout[1][1] == 'X' && layout[2][0] == 'X')
+            return true;
+        else return false;
+    }
+
+    /**
+     * Normal Method:
+     * This method combines all the checks into one full check.
+     * If there are 3 'X' in the right spots, then it will return true.
+     * @return
+     */
+    public boolean checkX() {
+        for (int i = 0; i < layout.length; i++) {
+            if (checkXInRow(i)) return true;
+            else if (checkXInColumn(i)) return true;
+        }
+
+        if (checkXDiagonally()) return true;
+
+        return false;
+    }
+
+    /**
+     * Normal Method:
+     * This method takes in a row index and then checks if the row in the array has all 'O' values.
+     * If so, then it returns true.
+     * @param row
+     * @return
+     */
+    private boolean checkOInRow(int row) {
+        if (layout[row][0] == 'O' && layout[row][1] == 'O' && layout[row][2] == 'O')
             return true;
         else return false;
     }
@@ -176,7 +219,7 @@ public class Board {
      * @param column
      * @return
      */
-    public boolean checkOInColumn(int column) {
+    private boolean checkOInColumn(int column) {
         if (layout[0][column] == 'O' && layout[1][column] == 'O' && layout[2][column] == 'O')
             return true;
         else return false;
@@ -184,14 +227,32 @@ public class Board {
 
     /**
      * Normal Method:
-     * This method takes in a row index and then checks if the row in the array has all 'O' values.
-     * If so, then it returns true.
-     * @param row
+     * This method checks the board diagonally for 'O' and if it is in all 3 spots, then the method returns true.
      * @return
      */
-    public boolean checkOInRow(int row) {
-        if (layout[row][0] == 'O' && layout[row][1] == 'O' && layout[row][2] == 'O')
+    private boolean checkODiagonally() {
+        if (layout[0][0] == 'O' && layout[1][1] == 'O' && layout[2][2] == 'O')
+            return true;
+        else if (layout[0][2] == 'O' && layout[1][1] == 'O' && layout[2][0] == 'O')
             return true;
         else return false;
     }
+
+    /**
+     * Normal Method:
+     * This method combines all the checks into one full check.
+     * If there are 3 'O' in the right spots, then it will return true.
+     * @return
+     */
+    public boolean checkO() {
+        for (int i = 0; i < layout.length; i++) {
+            if (checkOInRow(i)) return true;
+            else if (checkOInColumn(i)) return true;
+        }
+
+        if (checkODiagonally()) return true;
+
+        return false;
+    }
+
 }
