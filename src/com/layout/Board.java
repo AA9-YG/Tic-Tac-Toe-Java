@@ -107,7 +107,7 @@ public class Board {
             }
         }
 
-        System.out.println(counter);
+//        System.out.println(counter); // Check if counter is working
         if (counter == size()) return true;
         else return false;
     }
