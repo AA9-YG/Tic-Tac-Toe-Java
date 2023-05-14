@@ -25,7 +25,7 @@ public class TicTacToe {
 //        System.out.println(board.isFull());
 
         int counter = 0;
-        Scanner scan = new Scanner(System.in);
+
 
         while (!board.isFull()) {
 
@@ -33,19 +33,33 @@ public class TicTacToe {
 
             if (counter % 2 == 0) {
 
-                while(check) {
+                // Will loop until Player 1 input is correct
+                while (check) {
+                    // Scanner has to be inside loop otherwise it'll keep the same values and loop infinitely
+                    Scanner scan = new Scanner(System.in);
+
                     System.out.print("Ready Player 1? Enter row and column index: ");
-                    int row = scan.nextInt();
-                    int column = scan.nextInt();
 
-                    if ((row >= 0 && row < board.getRowSize()) && (column >= 0 && column < board.getRowSize())) {
-                        board.setX(row, column);
-                        break;
+                    // Check if input is a number
+                    try {
+                        int row = scan.nextInt();
+                        int column = scan.nextInt();
+
+                        // Check if input falls within bounds of board
+                        if ((row >= 0 && row < board.getRowSize()) && (column >= 0 && column < board.getRowSize())) {
+                            // Check if input falls into an open spot
+                            if (!board.isOccupied(row, column)) {
+                                board.setX(row, column);
+                                break;
+                            } else System.out.println("Spot has been taken. Try again.");
+                        } else
+                            System.out.println("Try again Player 1. Make sure row and column fall within the board.");
+                    } catch (Exception e) {
+                        System.out.println("Enter two numbers that are between 0 and 2 inclusive");
                     }
-
-                    System.out.println("Try again Player 1. Make sure row and column fall within the board.");
                 }
 
+                // Check after correct input if player has won
                 if (board.checkX()) {
                     System.out.println("Congrats Player 1! You win!");
                     board.displayBoard();
@@ -56,19 +70,33 @@ public class TicTacToe {
 
             } else {
 
+                // Will loop until Player 2 input is correct
                 while (check) {
+                    // Scanner has to be inside loop otherwise it'll keep the same values and loop infinitely
+                    Scanner scan = new Scanner(System.in);
+
                     System.out.print("Ready Player 2? Enter row and column index: ");
-                    int row = scan.nextInt();
-                    int column = scan.nextInt();
 
-                    if ((row >= 0 && row < board.getRowSize()) && (column >= 0 && column < board.getRowSize())) {
-                        board.setO(row, column);
-                        break;
+                    // Check for input that isn't a number
+                    try {
+                        int row = scan.nextInt();
+                        int column = scan.nextInt();
+
+                        // Check if input is within bounds of board
+                        if ((row >= 0 && row < board.getRowSize()) && (column >= 0 && column < board.getRowSize())) {
+                            // Check if spot is taken
+                            if (!board.isOccupied(row, column)) {
+                                board.setO(row, column);
+                                break;
+                            } else System.out.println("Spot has been taken. Try again.");
+                        } else
+                            System.out.println("Try again Player 2. Make sure row and column fall within the board.");
+                    } catch (Exception e) {
+                        System.out.println("Enter two numbers that are between 0 and 2 inclusive");
                     }
-
-                    System.out.println("Try again Player 2. Make sure row and column fall within the board.");
                 }
 
+                // Check after correct input if player has won
                 if (board.checkO()) {
                     System.out.println("Congrats Player 2! You win!");
                     board.displayBoard();

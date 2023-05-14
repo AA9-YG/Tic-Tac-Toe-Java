@@ -257,4 +257,16 @@ public class Board {
         return false;
     }
 
+    /**
+     * Normal Method:
+     * This method takes a row and column index and checks if that location has an X or O. If so, then it returns true.
+     * @param row
+     * @param column
+     * @return
+     */
+    public boolean isOccupied(int row, int column) {
+        if (layout[row][column] == 'X' || layout[row][column] == 'O') return true;
+        else return false;
+    }
+
 }
