@@ -111,5 +111,7 @@ public class TicTacToe {
 
         }
 
+        if (board.isFull()) System.out.println("No winner. Board is full");
+
     }
 }
