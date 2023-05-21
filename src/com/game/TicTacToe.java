@@ -57,6 +57,8 @@ public class TicTacToe {
                     } catch (Exception e) {
                         System.out.println("Enter two numbers that are between 0 and 2 inclusive");
                     }
+
+                    scan.close();
                 }
 
                 // Check after correct input if player has won
@@ -94,6 +96,8 @@ public class TicTacToe {
                     } catch (Exception e) {
                         System.out.println("Enter two numbers that are between 0 and 2 inclusive");
                     }
+
+                    scan.close();
                 }
 
                 // Check after correct input if player has won
